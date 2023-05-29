@@ -1,0 +1,28 @@
+.header {
+    font-family: 'Anton', sans-serif;
+    font-weight: 300;
+    align-self: center;
+    justify-self: center;
+
+    &__text {
+        text-transform: uppercase;
+        color: $color-primary;
+
+        &-1 {
+            color: $color-secondary;
+            font-size: 2.5rem;
+
+            animation-name: moveInLeft;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+        }
+
+        &-2 {
+            font-size: 6rem;
+
+            animation-name: moveInBottom1;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+        }
+    }
+}

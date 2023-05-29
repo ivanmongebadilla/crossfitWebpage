@@ -1,0 +1,40 @@
+//VARIABLES 
+$color-primary: #ffffff;
+$color-secondary: rgb(129, 0, 0);
+
+$color-card-1: rgb(22, 21, 78);
+
+//FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-secondary: 'Josefin Sans', sans-serif;
+$font-navbar: 'Abril Fatface', cursive;
+
+//MEDIA QUERIES 
+$bp-largest: 62.5em; //1000px
+$bp-large: 50em; //800px
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0%;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1 rem =10 px
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 40%;
+    }
+}
+
+.container {
+    background-image: linear-gradient(rgba(47, 47, 48, .7), rgba(47, 47, 48, .7)), url('../img/bg_2.jpg');
+    background-size: cover;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto calc(100vh - 10rem);
+}
