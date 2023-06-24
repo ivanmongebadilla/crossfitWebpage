@@ -20,20 +20,152 @@
 }
 
 .card {
-    height: 35rem;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 3px;
-    overflow: hidden;
+    font-family: $font-cards;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 45rem;
+
+    &__side {
+        height: 45rem;
+        transition: all .8s ease;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+
+        background-color: orangered;
+
+        &--front {
+            &-1{
+                background-color: $color-kids;
+            }
+
+            &-2{
+                background-color: $color-gold;
+            }
+
+            &-3{
+                background-color: $color-std;
+            }
+        }
+
+        &--back {
+            // transform: rotateY(180deg);
+            // background-color: olivedrab;
+            &-1{
+                transform: rotateY(180deg);
+                background-color: $color-kids;
+                text-align: center;
+            }
+            &-2{
+                transform: rotateY(180deg);
+                background-color: $color-gold;
+                text-align: center;
+            }
+            &-3{
+                transform: rotateY(180deg);
+                background-color: $color-std;
+                text-align: center;
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        &-1{
+            transform: rotateY(-180deg);
+        }
+
+        &-2{
+            transform: rotateY(-180deg);
+        }
+
+        &-3{
+            transform: rotateY(-180deg);
+        }
+    }
+
+    &:hover &__side--back-1,
+    &:hover &__side--back-2,
+    &:hover &__side--back-3 {
+        transform: rotateY(0);
+    }
+
+    &__picture {
+        background-size: cover;
+        height: 17rem;
+        background-blend-mode: screen;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+
+        &--1 {
+            background-image: url(../img/card3.jpg);
+        }
+
+        &--2 {
+            background-image: url(../img/gold-pass.jpg);
+        }
+
+        &--3 {
+            background-image: url(../img/std-pass.jpg);
+        }
+    }
     
-    background-color: orangered;
 
-    &__front {
-
+    &__heading {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        color: white;
+        font-size: 4rem;
+        text-align: center;
     }
 
-    &__back {
-        
+    &__details {
+        padding: .3rem 3rem;
+        color: $color-thertiary;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                
+                &:first-child {
+                    font-size: 2.5rem;
+                }
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid black;
+                }
+            }
+        }
     }
+}
+
+.back__container {
+    margin-top: 35%;
+    font-size: 4rem;
+
+    span{
+        display: block;
+    }
+}
+
+.bigger {
+    font-size: 15rem;
+}
+
+.opt-2 {
+    color: $color-thertiary;
 }

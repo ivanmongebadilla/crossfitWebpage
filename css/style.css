@@ -35,13 +35,99 @@ html {
   transform: translateY(-3px) scale(1.1); }
 
 .card {
-  height: 35rem;
-  width: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 3px;
-  overflow: hidden;
-  background-color: orangered; }
+  font-family: "Cabin Sketch", cursive;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 45rem; }
+  .card__side {
+    height: 45rem;
+    transition: all .8s ease;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: orangered; }
+    .card__side--front-1 {
+      background-color: #9ff5f5; }
+    .card__side--front-2 {
+      background-color: #f8ee8e; }
+    .card__side--front-3 {
+      background-color: white; }
+    .card__side--back-1 {
+      transform: rotateY(180deg);
+      background-color: #9ff5f5;
+      text-align: center; }
+    .card__side--back-2 {
+      transform: rotateY(180deg);
+      background-color: #f8ee8e;
+      text-align: center; }
+    .card__side--back-3 {
+      transform: rotateY(180deg);
+      background-color: white;
+      text-align: center; }
+  .card:hover .card__side--front-1 {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--front-2 {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--front-3 {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back-1,
+  .card:hover .card__side--back-2,
+  .card:hover .card__side--back-3 {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 17rem;
+    background-blend-mode: screen;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+    .card__picture--1 {
+      background-image: url(../img/card3.jpg); }
+    .card__picture--2 {
+      background-image: url(../img/gold-pass.jpg); }
+    .card__picture--3 {
+      background-image: url(../img/std-pass.jpg); }
+  .card__heading {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    color: white;
+    font-size: 4rem;
+    text-align: center; }
+  .card__details {
+    padding: .3rem 3rem;
+    color: #6b6b6b; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:first-child {
+          font-size: 2.5rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid black; }
+
+.back__container {
+  margin-top: 35%;
+  font-size: 4rem; }
+  .back__container span {
+    display: block; }
+
+.bigger {
+  font-size: 15rem; }
+
+.opt-2 {
+  color: #6b6b6b; }
 
 @keyframes moveInLeft {
   0% {
@@ -154,8 +240,8 @@ html {
   align-self: center;
   justify-self: center;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 4rem;
+  grid-template-columns: repeat(3, 27rem);
+  grid-column-gap: 11rem;
   height: 35rem;
   font-size: 10rem;
   color: #ffffff; }
