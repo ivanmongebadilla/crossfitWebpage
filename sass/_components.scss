@@ -42,15 +42,15 @@
 
         &--front {
             &-1{
-                background-color: $color-kids;
+                background-image: linear-gradient($color-kids, white);
             }
 
             &-2{
-                background-color: $color-gold;
+                background-image: linear-gradient($color-gold, white);
             }
 
             &-3{
-                background-color: $color-std;
+                background-image: linear-gradient($color-std, white);
             }
         }
 
@@ -59,17 +59,17 @@
             // background-color: olivedrab;
             &-1{
                 transform: rotateY(180deg);
-                background-color: $color-kids;
+                background-image: linear-gradient($color-kids, white);
                 text-align: center;
             }
             &-2{
                 transform: rotateY(180deg);
-                background-color: $color-gold;
+                background-image: linear-gradient($color-gold, white);
                 text-align: center;
             }
             &-3{
                 transform: rotateY(180deg);
-                background-color: $color-std;
+                background-image: linear-gradient($color-std, white);
                 text-align: center;
             }
         }
@@ -151,21 +151,128 @@
             }
         }
     }
-}
 
-.back__container {
-    margin-top: 35%;
-    font-size: 4rem;
+    &__back--container{
+        margin-top: 35%;
+        font-size: 4rem;
+        color: $color-thertiary;
+    
+        span{
+            display: block;
+        }
+    }
 
-    span{
-        display: block;
+    &__bigger {
+        font-size: 15rem;
+    }
+
+    &__back--opt2{
+        color: $color-thertiary;
     }
 }
 
-.bigger {
-    font-size: 15rem;
-}
+.form {
+    font-family: $font-primary;
 
-.opt-2 {
-    color: $color-thertiary;
+    &__group{
+        font-family: $font-primary;
+    }
+
+    // &__group:not(:last-child) {
+    //     margin-bottom: 1rem;
+    // }
+
+    &__label {
+        font-family: $font-primary;
+        display: block;
+        font-size: 2.7rem;
+        margin-left: .7rem;
+        transition: all .3s;
+
+    }
+
+    &__input {
+        display: block;
+        font-family: inherit;
+        font-size: 2.2rem;
+        width: 35rem;
+        padding: .5rem .7rem;
+        border-radius: 2px;
+        border: none;
+        border-bottom: 3px solid transparent;
+        transition: all .3s;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(black, .1);
+            border-bottom: 3px solid $color-fourth;
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-secondary;
+        }
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__radio-group {
+        //width: 32%;
+        display: inline-block;
+        margin-left: .5rem;
+    }
+
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        font-size: $font-primary;
+        font-size: 1.7rem;
+        cursor: pointer;
+        position: relative;
+        padding-left: 4rem;
+    }
+
+    &__radio-button {
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid $color-fourth;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -.4rem;
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-fourth;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+        opacity: 1;
+    }
+
+    &__date{
+        display: inline-block;
+    }
+
+    &__time{
+        display: inline-block;
+        font-size:1.3rem;
+    }
 }

@@ -53,22 +53,22 @@ html {
     overflow: hidden;
     background-color: orangered; }
     .card__side--front-1 {
-      background-color: #9ff5f5; }
+      background-image: linear-gradient(#9ff5f5, white); }
     .card__side--front-2 {
-      background-color: #f8ee8e; }
+      background-image: linear-gradient(#f8ee8e, white); }
     .card__side--front-3 {
-      background-color: white; }
+      background-image: linear-gradient(#a1f795, white); }
     .card__side--back-1 {
       transform: rotateY(180deg);
-      background-color: #9ff5f5;
+      background-image: linear-gradient(#9ff5f5, white);
       text-align: center; }
     .card__side--back-2 {
       transform: rotateY(180deg);
-      background-color: #f8ee8e;
+      background-image: linear-gradient(#f8ee8e, white);
       text-align: center; }
     .card__side--back-3 {
       transform: rotateY(180deg);
-      background-color: white;
+      background-image: linear-gradient(#a1f795, white);
       text-align: center; }
   .card:hover .card__side--front-1 {
     transform: rotateY(-180deg); }
@@ -116,18 +116,87 @@ html {
           font-size: 2.5rem; }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid black; }
+  .card__back--container {
+    margin-top: 35%;
+    font-size: 4rem;
+    color: #6b6b6b; }
+    .card__back--container span {
+      display: block; }
+  .card__bigger {
+    font-size: 15rem; }
+  .card__back--opt2 {
+    color: #6b6b6b; }
 
-.back__container {
-  margin-top: 35%;
-  font-size: 4rem; }
-  .back__container span {
-    display: block; }
-
-.bigger {
-  font-size: 15rem; }
-
-.opt-2 {
-  color: #6b6b6b; }
+.form {
+  font-family: "Belanosima", sans-serif; }
+  .form__group {
+    font-family: "Belanosima", sans-serif; }
+  .form__label {
+    font-family: "Belanosima", sans-serif;
+    display: block;
+    font-size: 2.7rem;
+    margin-left: .7rem;
+    transition: all .3s; }
+  .form__input {
+    display: block;
+    font-family: inherit;
+    font-size: 2.2rem;
+    width: 35rem;
+    padding: .5rem .7rem;
+    border-radius: 2px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: all .3s; }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #16154e; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #810000; }
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
+  .form__radio-group {
+    display: inline-block;
+    margin-left: .5rem; }
+  .form__radio-input {
+    display: none; }
+  .form__radio-label {
+    font-size: "Belanosima", sans-serif;
+    font-size: 1.7rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4rem; }
+  .form__radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid #16154e;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -.4rem; }
+    .form__radio-button::after {
+      content: "";
+      display: block;
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #16154e;
+      opacity: 0;
+      transition: opacity .2s; }
+  .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+    opacity: 1; }
+  .form__date {
+    display: inline-block; }
+  .form__time {
+    display: inline-block;
+    font-size: 1.3rem; }
 
 @keyframes moveInLeft {
   0% {
@@ -182,7 +251,8 @@ html {
     font-size: 1.5rem;
     text-decoration: none;
     text-transform: uppercase;
-    display: block; }
+    display: block;
+    transition: transform ease .2s; }
   .navbar__menu-link:hover, .navbar__menu-link:active {
     transform: translateY(-3px) scale(1.2); }
   .navbar__menu-item {
@@ -245,6 +315,34 @@ html {
   height: 35rem;
   font-size: 10rem;
   color: #ffffff; }
+
+.join {
+  height: auto;
+  width: 80rem;
+  margin: auto;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 80%, transparent 50%), url(../img/wp1.jpg);
+  background-size: 100%; }
+  .join__container {
+    padding: 2rem 5rem;
+    display: flex; }
+  .join__heading-2 {
+    font-family: "Belanosima", sans-serif;
+    font-size: 2.7rem;
+    margin-left: .7rem;
+    margin-bottom: .5rem; }
+  .join__motivation {
+    font-family: "Belanosima", sans-serif;
+    font-size: 4rem;
+    color: #810000;
+    margin: auto;
+    text-transform: uppercase;
+    padding: 2rem;
+    text-align: center; }
+    .join__motivation span {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 5rem; }
 
 .mb-sm {
   margin-bottom: 2rem; }
