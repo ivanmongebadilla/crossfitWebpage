@@ -1,0 +1,73 @@
+.aboutus {
+    font-family: $font-primary;
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 27rem);
+    grid-column-gap: 11rem;
+    grid-row-gap: 4rem;
+    align-items: start;
+
+    &__text {
+        font-family: inherit;
+        grid-column: 1/-1;
+        align-self: start;
+        justify-self: center;
+
+        font-size: 3rem;
+        color: white;
+        margin: auto;
+        text-transform: uppercase;
+        padding: 2rem;
+    }
+
+    &__contact {
+        //align-self: center;
+        justify-self: center;
+        //display: flex;
+        //flex-direction: column;
+        text-align: center;
+
+        span,
+        button {
+            display: block;
+            margin: 2rem auto;
+        }
+
+        span {
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+    }
+
+    &__address {
+        //align-self: center;
+        justify-self: center;
+        text-align: center;
+
+        span,
+        button {
+            display: block;
+            margin: 2rem auto;
+        }
+
+        span {
+            color: white;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__hours {
+        //align-self: center;
+        justify-self: center;
+        text-align: center;
+
+        span {
+            display: block;
+            margin: 2rem auto;
+            color: white;
+            font-size: 1.5rem;
+        }
+    }
+}

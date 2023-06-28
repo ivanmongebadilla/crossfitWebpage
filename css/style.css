@@ -316,6 +316,54 @@ html {
   font-size: 10rem;
   color: #ffffff; }
 
+.aboutus {
+  font-family: "Belanosima", sans-serif;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(3, 27rem);
+  grid-column-gap: 11rem;
+  grid-row-gap: 4rem;
+  align-items: start; }
+  .aboutus__text {
+    font-family: inherit;
+    grid-column: 1/-1;
+    align-self: start;
+    justify-self: center;
+    font-size: 3rem;
+    color: white;
+    margin: auto;
+    text-transform: uppercase;
+    padding: 2rem; }
+  .aboutus__contact {
+    justify-self: center;
+    text-align: center; }
+    .aboutus__contact span,
+    .aboutus__contact button {
+      display: block;
+      margin: 2rem auto; }
+    .aboutus__contact span {
+      color: white;
+      font-size: 1.5rem; }
+  .aboutus__address {
+    justify-self: center;
+    text-align: center; }
+    .aboutus__address span,
+    .aboutus__address button {
+      display: block;
+      margin: 2rem auto; }
+    .aboutus__address span {
+      color: white;
+      font-size: 1.5rem; }
+  .aboutus__hours {
+    justify-self: center;
+    text-align: center; }
+    .aboutus__hours span {
+      display: block;
+      margin: 2rem auto;
+      color: white;
+      font-size: 1.5rem; }
+
 .join {
   height: auto;
   width: 80rem;
@@ -355,3 +403,8 @@ html {
 
 .mb-hg {
   margin-bottom: 8rem; }
+
+.heading1 {
+  font-family: "Belanosima", sans-serif;
+  color: #ffffff;
+  font-size: 3rem; }
