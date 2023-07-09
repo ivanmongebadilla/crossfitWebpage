@@ -17,7 +17,7 @@ html {
   background-size: cover;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto calc(100vh - 10rem); }
+  grid-template-rows: auto minmax(calc(100vh - 10rem), auto); }
 
 .btn {
   border: none;
@@ -391,6 +391,56 @@ html {
       text-transform: uppercase;
       font-weight: 700;
       font-size: 5rem; }
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .gallery__container {
+    flex: 1;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: repeat(3, 25vh) auto;
+    grid-gap: 1.5rem; }
+  .gallery__button {
+    grid-column: 1 / span 3;
+    justify-self: center; }
+  .gallery__item--1 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3; }
+  .gallery__item--2 {
+    grid-row: 1 / span 2;
+    grid-column: 3 / span 1; }
+  .gallery__item--3 {
+    grid-row: 2 / span 2;
+    grid-column: 1 / span 1; }
+  .gallery__item--4 {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2; }
+  .gallery__item--5 {
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 2; }
+  .gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; }
+  .gallery__comments {
+    margin: auto;
+    text-align: center;
+    color: white;
+    display: flex; }
+  .gallery__comment {
+    font-size: 4rem;
+    flex: 1; }
+    .gallery__comment--comment {
+      padding: 2rem;
+      font-size: 2rem;
+      font-style: italic; }
+  .gallery__icon {
+    color: yellow; }
 
 .mb-sm {
   margin-bottom: 2rem; }

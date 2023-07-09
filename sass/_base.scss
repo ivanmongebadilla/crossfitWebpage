@@ -41,5 +41,6 @@ html {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto calc(100vh - 10rem);
+    // grid-template-rows: auto calc(100vh - 10rem);
+    grid-template-rows: auto minmax(calc(100vh - 10rem), auto);
 }
