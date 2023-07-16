@@ -40,6 +40,9 @@ html {
   -moz-perspective: 150rem;
   position: relative;
   height: 45rem; }
+  @media only screen and (max-width: 43.75em) {
+    .card {
+      margin-bottom: 3rem; } }
   .card__side {
     height: 45rem;
     transition: all .8s ease;
@@ -315,6 +318,9 @@ html {
   height: 35rem;
   font-size: 10rem;
   color: #ffffff; }
+  @media only screen and (max-width: 43.75em) {
+    .price {
+      grid-template-columns: repeat(1, 27rem); } }
 
 .aboutus {
   font-family: "Belanosima", sans-serif;
@@ -338,6 +344,9 @@ html {
   .aboutus__contact {
     justify-self: center;
     text-align: center; }
+    @media only screen and (max-width: 25em) {
+      .aboutus__contact {
+        grid-column: 1/ span 3; } }
     .aboutus__contact span,
     .aboutus__contact button {
       display: block;
@@ -355,6 +364,9 @@ html {
     .aboutus__address span {
       color: white;
       font-size: 1.5rem; }
+    @media only screen and (max-width: 25em) {
+      .aboutus__address {
+        grid-column: 1/ span 3; } }
   .aboutus__hours {
     justify-self: center;
     text-align: center; }
@@ -363,6 +375,9 @@ html {
       margin: 2rem auto;
       color: white;
       font-size: 1.5rem; }
+    @media only screen and (max-width: 25em) {
+      .aboutus__hours {
+        grid-column: 1/ span 3; } }
 
 .join {
   height: auto;
@@ -431,10 +446,14 @@ html {
     margin: auto;
     text-align: center;
     color: white;
-    display: flex; }
+    display: flex;
+    flex-wrap: wrap; }
   .gallery__comment {
     font-size: 4rem;
-    flex: 1; }
+    flex: 1;
+    flex-shrink: 0; }
+    .gallery__comment--stars {
+      min-width: 30rem; }
     .gallery__comment--comment {
       padding: 2rem;
       font-size: 2rem;

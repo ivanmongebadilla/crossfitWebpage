@@ -25,6 +25,11 @@
     -moz-perspective: 150rem;
     position: relative;
     height: 45rem;
+    // width: 25rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 3rem;
+    }
 
     &__side {
         height: 45rem;

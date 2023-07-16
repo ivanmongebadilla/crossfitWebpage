@@ -54,11 +54,17 @@
         text-align: center;
         color: white;
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__comment {
         font-size: 4rem;
         flex: 1;
+        flex-shrink: 0;
+
+        &--stars {
+            min-width: 30rem;
+        }
 
         &--comment {
             padding: 2rem;

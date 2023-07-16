@@ -6,6 +6,10 @@
     grid-column-gap: 11rem;
     height: 35rem;
 
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: repeat(1, 27rem);
+    }
+
     font-size: 10rem;
     color: $color-primary;
 }
