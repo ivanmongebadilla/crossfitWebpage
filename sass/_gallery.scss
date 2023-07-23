@@ -4,6 +4,10 @@
     align-items: center;
     justify-content: center;
 
+    animation-name: moveInBottom1;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
     &__container {
         flex: 1;
         display: grid;

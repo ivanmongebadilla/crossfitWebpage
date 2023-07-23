@@ -40,6 +40,18 @@ html {
   -moz-perspective: 150rem;
   position: relative;
   height: 45rem; }
+  .card__1 {
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .card__2 {
+    animation-name: moveInBottom1;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .card__3 {
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
   @media only screen and (max-width: 43.75em) {
     .card {
       margin-bottom: 3rem; } }
@@ -211,6 +223,16 @@ html {
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 @keyframes moveInBottom1 {
   0% {
     opacity: 0;
@@ -260,24 +282,74 @@ html {
     transform: translateY(-3px) scale(1.2); }
   .navbar__menu-item {
     align-self: min-content; }
+  .navbar__icon {
+    display: none; }
+    @media only screen and (max-width: 50em) {
+      .navbar__icon {
+        display: inline-block; } }
+  .navbar__checkbox {
+    display: none; }
+  .navbar__background {
+    height: 6rem;
+    width: 6rem;
+    background-color: #6b6b6b;
+    border-radius: 50%;
+    position: fixed;
+    top: 1rem;
+    right: 2.7rem;
+    z-index: 1000;
+    transition: transform 0.8s ease-out; }
+  .navbar__label {
+    height: 6rem;
+    width: 6rem;
+    position: fixed;
+    top: 1rem;
+    right: 2.7rem;
+    z-index: 2000;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white; }
+  .navbar__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s ease-out; }
+  .navbar__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center; }
+  .navbar__item {
+    margin: 4rem 0;
+    font-size: 20rem; }
+  .navbar__checkbox:checked ~ .navbar__background {
+    transform: scale(50); }
+  .navbar__checkbox:checked ~ .navbar__nav {
+    opacity: 1;
+    width: 100vw; }
 
 .active {
   color: #810000 !important;
   font-size: 2rem !important; }
 
 .nav-btn {
-  display: none;
   border: none;
   border-radius: 0;
+  z-index: 1700;
   background-color: #ffffff;
   height: 2px;
   width: 4.5rem;
   margin-top: 3rem;
   margin-right: 3rem;
   justify-self: end; }
-  @media only screen and (max-width: 50em) {
-    .nav-btn {
-      display: inline-block; } }
   .nav-btn::before, .nav-btn::after {
     background-color: #ffffff;
     height: 2px;
@@ -330,7 +402,10 @@ html {
   grid-template-columns: repeat(3, 27rem);
   grid-column-gap: 11rem;
   grid-row-gap: 4rem;
-  align-items: start; }
+  align-items: start;
+  animation-name: moveInBottom1;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
   .aboutus__text {
     font-family: inherit;
     grid-column: 1/-1;
@@ -385,7 +460,10 @@ html {
   margin: auto;
   border-radius: 10px;
   background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 80%, transparent 50%), url(../img/wp1.jpg);
-  background-size: 100%; }
+  background-size: 100%;
+  animation-name: moveInBottom1;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
   .join__container {
     padding: 2rem 5rem;
     display: flex; }
@@ -411,7 +489,10 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  animation-name: moveInBottom1;
+  animation-duration: 1s;
+  animation-timing-function: ease-out; }
   .gallery__container {
     flex: 1;
     display: grid;

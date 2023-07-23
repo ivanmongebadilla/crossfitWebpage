@@ -27,6 +27,24 @@
     height: 45rem;
     // width: 25rem;
 
+    &__1 {
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+
+    &__2 {
+        animation-name: moveInBottom1;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+
+    &__3 {
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+
     @media only screen and (max-width: $bp-medium) {
         margin-bottom: 3rem;
     }

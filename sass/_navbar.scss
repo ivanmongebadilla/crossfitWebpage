@@ -48,6 +48,85 @@
             align-self: min-content;
         }
     }
+
+    &__icon {
+        display: none;
+
+        @media only screen and (max-width: $bp-large) {
+            display: inline-block;
+        }
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__background {
+        height: 6rem;
+        width: 6rem;
+        background-color: $color-thertiary;
+        border-radius: 50%;
+        position: fixed;
+        top: 1rem;
+        right: 2.7rem;
+        z-index: 1000;
+        // opacity: 0.9;
+
+        transition: transform 0.8s ease-out;
+        // transform: scale(50);
+    }
+
+    &__label {
+        height: 6rem;
+        width: 6rem;
+        position: fixed;
+        top: 1rem;
+        right: 2.7rem;
+        z-index: 2000;
+
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        color: white;
+    }
+
+    &__nav {
+        height: 100vh;
+        // width: 100vw;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1500;
+
+        opacity: 0;
+        width: 0;
+
+        transition: all 0.8s ease-out;
+    }
+
+    &__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        list-style: none;
+        text-align: center;
+    }
+
+    &__item {
+        margin: 4rem 0;
+        font-size: 20rem;
+    }
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(50);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100vw;
+    }
 }
 
 .active {
@@ -56,10 +135,11 @@
 }
 
 .nav-btn {
-    display: none;
+    // display: none;
 
     border: none;
     border-radius: 0;
+    z-index: 1700;
 
     background-color: $color-primary;
     height: 2px;
@@ -68,9 +148,9 @@
     margin-right: 3rem;
     justify-self: end;
 
-    @media only screen and (max-width: $bp-large) {
-        display: inline-block;
-    }
+    // @media only screen and (max-width: $bp-large) {
+    //     display: inline-block;
+    // }
 
     &::before,
     &::after {

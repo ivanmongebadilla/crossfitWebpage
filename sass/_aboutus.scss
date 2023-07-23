@@ -8,6 +8,10 @@
     grid-row-gap: 4rem;
     align-items: start;
 
+    animation-name: moveInBottom1;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
     &__text {
         font-family: inherit;
         grid-column: 1/-1;

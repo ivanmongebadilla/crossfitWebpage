@@ -11,6 +11,10 @@
                             url(../img/wp1.jpg);
     background-size: 100%;
 
+    animation-name: moveInBottom1;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
     &__container {
         padding: 2rem 5rem;
         display: flex;
